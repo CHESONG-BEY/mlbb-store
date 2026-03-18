@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends Bang Bang - Diamond Top-Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ MLBB Diamond Top-Up</h1>
+            <p>Fast & Secure Top-Up Service</p>
+        </header>
+
+        <main>
+            <div class="topup-card">
+                <h2>Purchase Diamonds</h2>
+                
+                <form id="topupForm">
+                    <!-- Player ID & Server -->
+                    <div class="form-group">
+                        <label for="playerId">Game ID:</label>
+                        <input type="text" id="playerId" name="playerId" placeholder="Enter your Game ID" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="server">Server:</label>
+                        <select id="server" name="server" required>
+                            <option value="">Select Server</option>
+                            <option value="global">Global</option>
+                            <option value="sea">Southeast Asia (SEA)</option>
+                            <option value="cn">China</option>
+                            <option value="garena">Garena</option>
+                            <option value="vn">Vietnam</option>
+                            <option value="id">Indonesia</option>
+                            <option value="ph">Philippines</option>
+                        </select>
+                    </div>
+
+                    <!-- Diamond Amount Selection -->
+                    <div class="form-group">
+                        <label>Select Diamond Amount:</label>
+                        <div class="diamond-grid">
+                            <button type="button" class="diamond-btn" data-amount="70" data-price="2.99">
+                                💎 70<br><small>$2.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="140" data-price="4.99">
+                                💎 140<br><small>$4.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="210" data-price="6.99">
+                                💎 210<br><small>$6.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="280" data-price="8.99">
+                                💎 280<br><small>$8.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="350" data-price="9.99">
+                                💎 350<br><small>$9.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="420" data-price="10.99">
+                                💎 420<br><small>$10.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="700" data-price="19.99">
+                                💎 700<br><small>$19.99</small>
+                            </button>
+                            <button type="button" class="diamond-btn" data-amount="1400" data-price="39.99">
+                                💎 1400<br><small>$39.99</small>
+                            </button>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="selectedDiamonds" name="selectedDiamonds" value="0">
+                    <input type="hidden" id="selectedPrice" name="selectedPrice" value="0">
+
+                    <!-- Display Selected Amount -->
+                    <div class="selected-display">
+                        <p id="selectedText">No diamonds selected</p>
+                    </div>
+
+                    <!-- Payment Gateway -->
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="stripe">Stripe</option>
+                            <option value="creditcard">Credit/Debit Card</option>
+                            <option value="googlepay">Google Pay</option>
+                            <option value="applepay">Apple Pay</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">Proceed to Payment</button>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    ✅ Order placed successfully! You will receive your diamonds within 5 minutes.
+                </div>
+
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    ❌ Error! Please fill in all fields correctly.
+                </div>
+            </div>
+
+            <!-- Admin Link -->
+            <div class="admin-link">
+                <a href="admin.html">Admin Panel</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 MLBB Diamond Top-Up | Secure & Fast Service</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
